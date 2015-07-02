@@ -55,7 +55,6 @@ int character_recognizing(IplImage * img_char)
 		img_char_after_resize = cvCreateImage(cvSize(WIDTH_RESIZE, HEIGHT_RESIZE), template_img->depth, template_img->nChannels);
 		cvResize(img_char, img_char_after_resize);
 		diff[i] = compare_diff(template_img_after_resize, img_char_after_resize);
-
 	}
 
 	number = find_min(diff, COUNT_NUMBER);

@@ -23,6 +23,28 @@
 #define SCALE_MAX_1 0.17
 #define SCALE_MIN_1 0.1
 
+
+
+
+/*配置参数*/
+/*
+int times_dilate_erode_x;
+int times_dilate_erode_y;
+int position_cut_x;
+int position_cut_y;
+int position_cut_width;
+int position_cut_height;
+*/
+
+
+
+
+
+
+
+
+
+
 struct Node {
 	CvRect item;
 	Node * next;
@@ -46,7 +68,7 @@ void resize_image(IplImage * img_to_resize, IplImage * img_after_resize, float s
 void preprocess_plate_image(IplImage * img_after_resize);
 
 void get_contour_rect(IplImage * src_img, List  rects, CvMemStorage * storage, CvSeq * contours);
-void draw_contour_rect(IplImage * src_img, List  rects);
+void draw_contour_rect(IplImage * src_img, List  rects, char * filename);
 void filter_rect_by_shape(List src_rects, List dst_rects);
 void print_area_of_rfect(CvRect rect);
 int main_plate(const char * filename);

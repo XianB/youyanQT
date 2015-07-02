@@ -49,7 +49,7 @@ void get_character(IplImage * img)
 	 */
 	rects_final = sort(rects_final);
 	filter_rect_lr(rects_final, img_after_removed);
-	draw_contour_rect(img_after_removed, rects_final->next);
+	draw_contour_rect(img_after_removed, rects_final->next, "image/img_plate_with_rect.bmp");
 	find_character(img_after_removed, rects_final);			/*也没有什么好改进的地方了*/
 }
 

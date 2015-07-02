@@ -46,7 +46,8 @@ List get_location(IplImage * img_car, IplImage * org_img_car)
 	 争取一次定位成功,并且只定位一个位置,不要预选位置
 	 */
 
-		dilate_erode_y(img_after_preprocess);
+	dilate_erode_y(img_after_preprocess);
+	//rects_final中最后只会保存一个矩形位置的
 	while (rects_final->next == NULL) {
 		/*主要问题是,如何在第一次就确定那个车牌的位置?*/
 		static int count = 0;
@@ -66,7 +67,7 @@ List get_location(IplImage * img_car, IplImage * org_img_car)
 			也就是说如果目前还没有得到候选位置只有可能是这样,在filter中找到的所有矩形颜色都不是蓝色的,也就是说车牌还没膨胀出来,而不会出现有一个位置,但这个位置不是车牌位置的情况
 		 */
 
-		draw_contour_rect(img_after_preprocess, rects);			/*显示未筛选前的矩形位置,看看到底有没有把车牌的位置找到*/
+		draw_contour_rect(img_after_preprocess, rects, "image/img_car_with_rect.bmp");			/*显示未筛选前的矩形位置,看看到底有没有把车牌的位置找到*/
 		filter_rect(rects->next, rects_final, org_img_car);				
 
 #if 1
@@ -86,7 +87,7 @@ List get_location(IplImage * img_car, IplImage * org_img_car)
 		/*能执行到这一步说明这肯定是只有一个矩形的*/
 
 		/*注意rects有头结点,所以传进去的时候忽略掉头结点*/
-	}
+	}//end while
 		return rects_final->next;
 #endif
 

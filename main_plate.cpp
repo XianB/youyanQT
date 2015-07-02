@@ -74,6 +74,7 @@ int main_plate(const char * car_name)
 	height = scale * img_car->height;
 	img_car_after_resize = cvCreateImage(cvSize(width, height), img_car->depth, img_car->nChannels);
 	cvResize(img_car, img_car_after_resize);			/*对尺寸进行归一化,得到宽为640的图像*/
+	cvSaveImage("image/img_car_after_resize.bmp", img_car_after_resize);
 #endif
 
 
@@ -121,6 +122,8 @@ int main_plate(const char * car_name)
 	//cvShowImage("image_car", img_after_resize);
 	//printf("the plate is: \n");
 	count_recog = 0;
+    FILE *fp = fopen("result.txt", "w");
+	fclose(fp);
 	while (count_recog < 7) {
 
 		sprintf(filename, "image/character%d.png", count_recog);

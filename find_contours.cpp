@@ -23,7 +23,7 @@ void get_contour_rect(IplImage * src_img, List  rects, CvMemStorage * storage, C
 }
 
 /*画出之前找到的所有矩形形状的位置*/
-void draw_contour_rect(IplImage * src_img, List rects)
+void draw_contour_rect(IplImage * src_img, List rects, char * filename)
 {
 	if (rects == NULL) {
 		fprintf(stderr, "rects is NULL! in draw_contour_rect function.\n");
@@ -43,7 +43,8 @@ void draw_contour_rect(IplImage * src_img, List rects)
 		cvRectangle(temp_img, cvPoint(rects->item.x, rects->item.y), cvPoint(rects->item.x + rects->item.width, rects->item.y + rects->item.height), CV_RGB(0xbF, 0xbd, 0xab), 1, 8, 0);
 		rects = rects->next;
 	}
-//	cvShowImage("img_with_rect", temp_img);
+    cvSaveImage(filename, temp_img);
+	//cvShowImage("img_with_rect", temp_img);
 //	cvWaitKey(0);
 }
 

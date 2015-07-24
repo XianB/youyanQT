@@ -58,3 +58,13 @@ void MainWindow::on_pushButton_clicked()
 {
     showImage("img_plate_after_preprocess", "image/img_plate_after_preprocess.bmp");
 }
+
+void MainWindow::on_pushButton_9_clicked()
+{
+    showImage("img_car_with_rect", "image/img_car_with.bmp");
+}
+
+void MainWindow::on_pushButton_10_clicked()
+{
+    showImage("img_plate_with_rect", "image/img_plate_with_rect.bmp");
+}

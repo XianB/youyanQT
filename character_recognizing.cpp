@@ -32,8 +32,9 @@ int character_recognizing(IplImage * img_char)
 //	cvNamedWindow("character_recgnizing");
 	int i = 0;
 	int number = -1;
+	FILE * fp;
 
-      if( freopen("result.txt", "a", stdout) < 0) {
+      if( (fp = fopen("result.txt", "a")) == NULL) {
           fprintf(stderr, "can not open file result.txt\n");
       }
 	for (i = 0; i < COUNT_NUMBER; i++) {
@@ -69,12 +70,13 @@ int character_recognizing(IplImage * img_char)
 		}
 	}
 	if (number < 10) {
-		printf("the number is : %d\n", number);
+		fprintf(fp, "the number is : %d\n", number);
 	} else if (number < 36){
-		printf("the character is : %c\n", number + 55);
+		fprintf(fp, "the character is : %c\n", number + 55);
 	} if ( number >= 36) {
-		printf("the chinese is :%s\n", chinese[number - 36]);
+		fprintf(fp, "the chinese is :%s\n", chinese[number - 36]);
 	}
+	fclose(fp);
 	return number;
 }
 

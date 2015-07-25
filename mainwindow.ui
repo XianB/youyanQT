@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>250</y>
+      <y>190</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>190</y>
+      <y>130</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -44,7 +44,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>220</y>
+      <y>160</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -70,7 +70,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>310</y>
+      <y>250</y>
       <width>201</width>
       <height>31</height>
      </rect>
@@ -102,7 +102,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>DSC_0130.jpg</string>
+     <string>DSC_0140.jpg</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
@@ -135,9 +135,9 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>120</y>
-      <width>131</width>
-      <height>181</height>
+      <y>70</y>
+      <width>181</width>
+      <height>201</height>
      </rect>
     </property>
     <property name="text">
@@ -196,32 +196,6 @@
      <string>默认显示分割出来的字符图片</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>130</y>
-      <width>201</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>显示膨胀腐蚀后的车辆图像</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_9">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>160</y>
-      <width>201</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>显示定位过程图像</string>
-    </property>
-   </widget>
    <widget class="QLineEdit" name="lineEdit_2">
     <property name="geometry">
      <rect>
@@ -272,7 +246,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>280</y>
+      <y>220</y>
       <width>201</width>
       <height>31</height>
      </rect>

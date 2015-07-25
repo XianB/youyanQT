@@ -1,0 +1,75 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AREA_MAX	include/plate.h	13;"	d
+AREA_MAX_1	include/plate.h	22;"	d
+AREA_MIN	include/plate.h	14;"	d
+AREA_MIN_1	include/plate.h	21;"	d
+BIN_MIN	include/plate.h	17;"	d
+COUNT_NUMBER	character_recognizing.cpp	2;"	d	file:
+FILENAME_LEN	include/plate.h	15;"	d
+HEIGHT_RESIZE	character_recognizing.cpp	4;"	d	file:
+List	include/plate.h	/^typedef struct Node * List;$/;"	t	typeref:struct:Node
+MAINWINDOW_H	mainwindow.h	2;"	d
+MainWindow	mainwindow.cpp	/^MainWindow::MainWindow(QWidget *parent) :$/;"	f	class:MainWindow
+MainWindow	mainwindow.h	/^class MainWindow : public QMainWindow$/;"	c
+Node	include/plate.h	/^struct Node {$/;"	s
+PERCENT	get_character.cpp	2;"	d	file:
+RESIZED_HEIGHT	include/plate.h	20;"	d
+SCALE_MAX	include/plate.h	11;"	d
+SCALE_MAX_1	include/plate.h	23;"	d
+SCALE_MIN	include/plate.h	12;"	d
+SCALE_MIN_1	include/plate.h	24;"	d
+Ui	mainwindow.h	/^namespace Ui {$/;"	n
+WIDTH_RESIZE	character_recognizing.cpp	3;"	d	file:
+_DEBUG_	get_location.cpp	3;"	d	file:
+_PLATE_H_	include/plate.h	2;"	d
+character_recognizing	character_recognizing.cpp	/^int character_recognizing(IplImage * img_char)$/;"	f
+chinese	character_recognizing.cpp	/^char * chinese[31] = {$/;"	v
+compare_diff	character_recognizing.cpp	/^int compare_diff(IplImage *template_img, IplImage *char_img)$/;"	f
+count_node	List.cpp	/^int count_node(List L)$/;"	f
+create_list	List.cpp	/^List create_list()$/;"	f
+cut_image	main_plate.cpp	/^static void cut_image(IplImage * img_car) $/;"	f	file:
+delete_node	List.cpp	/^void delete_node(List L, CvRect item)$/;"	f
+dilate_erode_x	get_location.cpp	/^void dilate_erode_x(IplImage * img_after_threshold, IplImage * img_final) {$/;"	f
+dilate_erode_y	get_location.cpp	/^void dilate_erode_y(IplImage * img_final) {$/;"	f
+draw_contour_rect	find_contours.cpp	/^void draw_contour_rect(IplImage * src_img, List rects, char * filename)$/;"	f
+draw_rect	get_location.cpp	/^void draw_rect(IplImage * img, CvRect rect)$/;"	f
+empty_list	List.cpp	/^void empty_list(List L)$/;"	f
+filter_rect	get_location.cpp	/^void filter_rect(List src_rects, List dst_rects, IplImage * org_img_car)$/;"	f
+filter_rect_by_area	get_character.cpp	/^void filter_rect_by_area(List src_rects, List dst_rects, int total_area)$/;"	f
+filter_rect_lr	get_character.cpp	/^void filter_rect_lr(List rects, IplImage * img_plate)$/;"	f
+find_character	get_character.cpp	/^void find_character(IplImage * img, List rects)$/;"	f
+find_min	List.cpp	/^List find_min(List L)$/;"	f
+find_min	character_recognizing.cpp	/^int find_min(int diff[], int size)$/;"	f
+get_character	get_character.cpp	/^void get_character(IplImage * img) $/;"	f
+get_contour_rect	find_contours.cpp	/^void get_contour_rect(IplImage * src_img, List  rects, CvMemStorage * storage, CvSeq * contours)$/;"	f
+get_location	get_location.cpp	/^List get_location(IplImage * img_car, IplImage * org_img_car)$/;"	f
+get_plate_image	get_plate_image.cpp	/^void get_plate_image(IplImage * src_img, List  rects)$/;"	f
+histogram_analysing	get_location.cpp	/^bool histogram_analysing(CvHistogram *hist, int bins)$/;"	f
+identity_by_color	get_location.cpp	/^bool identity_by_color(IplImage * img, CvRect rects)$/;"	f
+is_empty	List.cpp	/^bool is_empty(List L)$/;"	f
+item	include/plate.h	/^	CvRect item;$/;"	m	struct:Node
+main	main.cpp	/^int main(int argc, char *argv[])$/;"	f
+main_plate	main_plate.cpp	/^int main_plate(const char * car_name)$/;"	f
+make_border_black	get_character.cpp	/^void make_border_black(IplImage *img)$/;"	f
+next	include/plate.h	/^	Node * next;$/;"	m	struct:Node
+on_pushButton_10_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_10_clicked()$/;"	f	class:MainWindow
+on_pushButton_4_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_4_clicked()$/;"	f	class:MainWindow
+on_pushButton_7_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_7_clicked()$/;"	f	class:MainWindow
+on_pushButton_9_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_9_clicked()$/;"	f	class:MainWindow
+on_pushButton_clicked	mainwindow.cpp	/^void MainWindow::on_pushButton_clicked()$/;"	f	class:MainWindow
+plate_resize_scale	main_plate.cpp	/^static double plate_resize_scale(IplImage * img_plate)$/;"	f	file:
+preprocess_car_img	preprocess.cpp	/^void preprocess_car_img(IplImage * img_car)$/;"	f
+preprocess_plate_image	preprocess_plate_image.cpp	/^void preprocess_plate_image(IplImage * img_plate)$/;"	f
+print_area_of_rect	find_contours.cpp	/^void print_area_of_rect(CvRect rect)$/;"	f
+push_back	List.cpp	/^void push_back(List L, CvRect i)$/;"	f
+remove_border_ul	get_character.cpp	/^void remove_border_ul(IplImage * img_plate)$/;"	f
+resize_image	resize_image.cpp	/^void resize_image(IplImage * img_to_resize, IplImage * img_after_resize, float scale)$/;"	f
+showImage	mainwindow.cpp	/^void showImage(char *wname, char * filename)$/;"	f
+sort	List.cpp	/^List sort(List L)$/;"	f
+ui	mainwindow.h	/^    Ui::MainWindow *ui;$/;"	m	class:MainWindow
+~MainWindow	mainwindow.cpp	/^MainWindow::~MainWindow()$/;"	f	class:MainWindow

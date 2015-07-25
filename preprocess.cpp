@@ -46,14 +46,18 @@ void preprocess_car_img(IplImage * img_car)
 	
 	/*一:灰度化 cvCvtColor(IplImage* src, IplImage* dst, int color)*/
 	cvCvtColor(img_car, img_gray, CV_RGB2GRAY);
+    cvSaveImage("image/img_gray.bmp", img_gray);
 	/*二:灰度拉伸*/
 	cvNormalize(img_gray, img_after_stre, 0, 255, CV_MINMAX);
+    cvSaveImage("image/img_after_stre.bmp", img_after_stre);
 	/*gray_strecth(img_gray, img_after_stre, 255, 0);  有自带的函数比这个好用*/
 	/*三:滤波*/
 	cvSmooth(img_after_stre, img_after_filter, CV_GAUSSIAN);
+    cvSaveImage("image/img_after_filter.bmp", img_after_filter);
 	/*四:边缘检测*/
 	//cvCanny(img_after_filter, img_after_sobel, 50, 150, 3);	/*比用sobel函数好,因为这个不会分方向,把所有的边缘都画了出来了*/
-	cvSobel(img_after_stre, img_after_sobel, 1, 0, 3);
+	cvSobel(img_after_filter, img_after_sobel, 1, 0, 3);
+    cvSaveImage("image/img_after_sobel.bmp", img_after_sobel);
 	/*五:二值化*/
 	cvThreshold(img_after_sobel, img_final, 0, 255, CV_THRESH_BINARY| CV_THRESH_OTSU);
 

@@ -33,12 +33,17 @@ void MainWindow::on_pushButton_7_clicked()
     QString Qfilename = ui->lineEdit->text();
     string filename = Qfilename.toStdString();
     main_plate(filename.c_str());
+
     FILE * fp = fopen("result.txt", "r");
 
-    char buf[1024];
-    fread(buf, 1024, sizeof(char), fp);
-    fprintf(stderr, "%s\n", buf);
-    ui->label_2->setText(buf);
+    char buf[1000];
+    while (feof(fp) == 0)
+    {
+    fread(buf, 1000, sizeof(char), fp);
+    fprintf(stderr, "%s", buf);
+	ui->label_2->setText(buf);
+    }
+    fclose(fp);
 }
 
 void MainWindow::on_pushButton_4_clicked()
@@ -67,4 +72,32 @@ void MainWindow::on_pushButton_9_clicked()
 void MainWindow::on_pushButton_10_clicked()
 {
     showImage("img_plate_with_rect", "image/img_plate_with_rect.bmp");
+}
+
+void MainWindow::on_pushButton_6_clicked()
+{
+    showImage("img_plate_with_rect", "image/img_car_after_resize.bmp");
+
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    showImage("img_plate_with_rect", "image/img_car_after_resize.bmp");
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    showImage("img_plate_with_rect", "image/img_car_with_rect.bmp");
+
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    showImage("img_plate_with_rect", "image/plate_img_after_resize.bmp");
+
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+
 }

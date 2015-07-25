@@ -122,7 +122,13 @@ int main_plate(const char * car_name)
 	//cvShowImage("image_car", img_after_resize);
 	//printf("the plate is: \n");
 	count_recog = 0;
-    FILE *fp = fopen("result.txt", "w");
+
+    FILE *fp = fopen("result.txt", "wb");
+    char buf[1] = {0};
+    int ct = 0;
+    while(ct++ < 10000) {
+	fwrite(buf, 1, sizeof(char), fp);
+    }
 	fclose(fp);
 	while (count_recog < 7) {
 
@@ -139,7 +145,6 @@ int main_plate(const char * car_name)
 		number = character_recognizing(img_character);
 		count_recog++;
 	}
-
 	cvWaitKey(0);
 	printf("Time used = %.2f\n", (double)clock() / CLOCKS_PER_SEC);
 	return 0;
